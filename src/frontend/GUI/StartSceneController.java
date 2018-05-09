@@ -76,7 +76,7 @@ public class StartSceneController {
                   Stage window = new Stage();
                   window.initModality(Modality.APPLICATION_MODAL);
                   FXMLLoader numLoader =
-                          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/ShutDown.fxml"));
+                          new FXMLLoader(this.getClass().getResource("ShutDown.fxml"));
                   Parent scene = null;
                   try {
                       scene = numLoader.load();

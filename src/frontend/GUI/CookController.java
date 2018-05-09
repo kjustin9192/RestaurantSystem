@@ -165,7 +165,7 @@ public class CookController {
 
     try {
       FXMLLoader loader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/ReceiveItem.fxml"));
+          new FXMLLoader(this.getClass().getResource("ReceiveItem.fxml"));
       Parent root = loader.load();
       window.setTitle("Receive Item");
       window.setScene(new Scene(root, 400, 200));
@@ -184,12 +184,12 @@ public class CookController {
     client.sendEvent(Packet.LOGOFF);
 
     FXMLLoader startLoader =
-        new FXMLLoader(this.getClass().getResource("src/frontend/GUI/Start.fxml"));
+        new FXMLLoader(this.getClass().getResource("Start.fxml"));
     GridPane root = startLoader.load();
     Scene mainScene = new Scene(root, 600, 600);
     BackgroundImage mainImage =
         new BackgroundImage(
-            new Image("hp.jpg", 600, 600, false, true),
+            new Image("frontend/GUI/images/hp.jpg", 600, 600, false, true),
             BackgroundRepeat.REPEAT,
             BackgroundRepeat.NO_REPEAT,
             BackgroundPosition.DEFAULT,

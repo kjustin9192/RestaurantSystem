@@ -36,7 +36,7 @@ public class FXMain extends Application {
     mainScene = new Scene(startScene, WIDTH, HEIGHT);
     BackgroundImage mainImage =
         new BackgroundImage(
-            new Image("/hp.jpg", 600, 600, false, true),
+            new Image("frontend/GUI/images/hp.jpg", 600, 600, false, true),
             BackgroundRepeat.REPEAT,
             BackgroundRepeat.NO_REPEAT,
             BackgroundPosition.DEFAULT,

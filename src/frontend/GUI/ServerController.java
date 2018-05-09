@@ -94,7 +94,7 @@ public class ServerController implements Initializable {
     // set up background
     BackgroundImage menuImage =
         new BackgroundImage(
-            new Image("server.png", 600, 600, false, true),
+            new Image("frontend/GUI/images/server.png", 600, 600, false, true),
             BackgroundRepeat.REPEAT,
             BackgroundRepeat.NO_REPEAT,
             BackgroundPosition.DEFAULT,
@@ -171,7 +171,7 @@ public class ServerController implements Initializable {
       window.initModality(Modality.APPLICATION_MODAL);
       try {
         FXMLLoader numLoader =
-            new FXMLLoader(this.getClass().getResource("src/frontend/GUI/TakeSeatAlertBox.fxml"));
+            new FXMLLoader(this.getClass().getResource("TakeSeatAlertBox.fxml"));
         Parent scene = numLoader.load();
         window.setTitle("Take Seat");
         window.setScene(new Scene(scene, 300, 200));
@@ -229,7 +229,7 @@ public class ServerController implements Initializable {
       window.initModality(Modality.APPLICATION_MODAL);
 
       try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("src/frontend/GUI/PrintBill.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PrintBill.fxml"));
         Parent root = loader.load();
         window.setTitle("Print Bill Station");
         window.setScene(new Scene(root, 600, 600));
@@ -265,7 +265,7 @@ public class ServerController implements Initializable {
 
       try {
         FXMLLoader loader =
-            new FXMLLoader(this.getClass().getResource("src/frontend/GUI/ClearTableAlertBox.fxml"));
+            new FXMLLoader(this.getClass().getResource("ClearTableAlertBox.fxml"));
         Parent root = loader.load();
         window.setScene(new Scene(root, 300, 200));
         ClearTableController controller = loader.getController();
@@ -320,7 +320,7 @@ public class ServerController implements Initializable {
 
     try {
       FXMLLoader loader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/ReceiveItem.fxml"));
+          new FXMLLoader(this.getClass().getResource("ReceiveItem.fxml"));
       Parent root = loader.load();
       window.setTitle("Receive Item");
       window.setScene(new Scene(root, 400, 200));
@@ -339,12 +339,12 @@ public class ServerController implements Initializable {
     client.sendEvent(Packet.LOGOFF);
 
     FXMLLoader startLoader =
-        new FXMLLoader(this.getClass().getResource("src/frontend/GUI/Start.fxml"));
+        new FXMLLoader(this.getClass().getResource("Start.fxml"));
     GridPane root = startLoader.load();
     Scene mainScene = new Scene(root, 600, 600);
     BackgroundImage mainImage =
         new BackgroundImage(
-            new Image("hp.jpg", 600, 600, false, true),
+            new Image("frontend/GUI/images/hp.jpg", 600, 600, false, true),
             BackgroundRepeat.REPEAT,
             BackgroundRepeat.NO_REPEAT,
             BackgroundPosition.DEFAULT,

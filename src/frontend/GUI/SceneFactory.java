@@ -29,7 +29,7 @@ public class SceneFactory {
     if (type == Packet.COOKTYPE) {
       // load cook interface
       FXMLLoader cookLoader =
-          new javafx.fxml.FXMLLoader(this.getClass().getResource("src/frontend/GUI/Cook.fxml"));
+          new javafx.fxml.FXMLLoader(this.getClass().getResource("Cook.fxml"));
       Parent cook = cookLoader.load();
       scene = new Scene(cook, WIDTH, HEIGHT);
 
@@ -39,13 +39,13 @@ public class SceneFactory {
     } else if (type == Packet.SERVERTYPE) {
       // load server interface
       FXMLLoader serverLoader =
-          new javafx.fxml.FXMLLoader(this.getClass().getResource("src/frontend/GUI/ServerStage.fxml"));
+          new javafx.fxml.FXMLLoader(this.getClass().getResource("ServerStage.fxml"));
       Parent server = serverLoader.load();
       scene = new Scene(server, WIDTH, HEIGHT);
 
       // load menu interface
       FXMLLoader menuLoader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/Menu.fxml"));
+          new FXMLLoader(this.getClass().getResource("Menu.fxml"));
       Parent menu = menuLoader.load();
       Scene menuScene = new Scene(menu, WIDTH, HEIGHT);
 
@@ -63,7 +63,7 @@ public class SceneFactory {
     } else if (type == Packet.MANAGERTYPE) {
       // load manager interface
       FXMLLoader managerLoader =
-          new javafx.fxml.FXMLLoader(this.getClass().getResource("src/frontend/GUI/Manager.fxml"));
+          new javafx.fxml.FXMLLoader(this.getClass().getResource("Manager.fxml"));
       Parent manager = managerLoader.load();
       scene = new Scene(manager, WIDTH, HEIGHT);
 

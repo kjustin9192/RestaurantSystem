@@ -112,7 +112,7 @@ public class MenuController {
       client.sendAdjustIngredientRequest(dishIngredients, true);
 
       FXMLLoader ingredientLoader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/Ingredient.fxml"));
+          new FXMLLoader(this.getClass().getResource("Ingredient.fxml"));
       try {
         GridPane ingredient = ingredientLoader.load();
         IngredientController controller = ingredientLoader.getController();

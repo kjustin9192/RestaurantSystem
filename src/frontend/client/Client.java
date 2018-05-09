@@ -26,7 +26,7 @@ import java.util.LinkedList;
  */
 public class Client implements Runnable {
   // Resources required for client-server communication
-  private static final String IP = "127.0.0.1"; // local IP//"100.64.91.138";
+  private static final String IP = "127.0.0.1"; //local IP
   private static final int PORT = 6000;
   private Socket socket;
   private volatile boolean connected;

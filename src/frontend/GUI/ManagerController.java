@@ -38,7 +38,7 @@ public class ManagerController {
 
     try {
       FXMLLoader numLoader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/Request.fxml"));
+          new FXMLLoader(this.getClass().getResource("Request.fxml"));
       Parent scene = numLoader.load();
       window.setTitle("Ingredient request!");
       window.setScene(new Scene(scene, 600, 600));
@@ -57,7 +57,7 @@ public class ManagerController {
 
     try {
       FXMLLoader numLoader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/InventoryDisplay.fxml"));
+          new FXMLLoader(this.getClass().getResource("InventoryDisplay.fxml"));
       Parent scene = numLoader.load();
       window.setTitle("Welcome!");
       window.setScene(new Scene(scene, 600, 600));
@@ -78,7 +78,7 @@ public class ManagerController {
 
     try {
       FXMLLoader loader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/ReceiveItem.fxml"));
+          new FXMLLoader(this.getClass().getResource("ReceiveItem.fxml"));
       Parent root = loader.load();
       window.setTitle("Receive Item");
       window.setScene(new Scene(root, 400, 200));
@@ -99,7 +99,7 @@ public class ManagerController {
 
     try {
       FXMLLoader loader =
-          new FXMLLoader(this.getClass().getResource("src/frontend/GUI/DishesNotDelivered.fxml"));
+          new FXMLLoader(this.getClass().getResource("DishesNotDelivered.fxml"));
       client.storeController("checkDishesNotDeliveredController", loader.getController());
       Parent root = loader.load();
       window.setTitle("Dishes not delivered");
@@ -120,12 +120,12 @@ public class ManagerController {
     client.sendEvent(Packet.LOGOFF);
 
     FXMLLoader startLoader =
-        new FXMLLoader(this.getClass().getResource("src/frontend/GUI/Start.fxml"));
+        new FXMLLoader(this.getClass().getResource("Start.fxml"));
     GridPane root = startLoader.load();
     Scene mainScene = new Scene(root, 600, 600);
     BackgroundImage mainImage =
         new BackgroundImage(
-            new Image("hp.jpg", 600, 600, false, true),
+            new Image("frontend/GUI/images/hp.jpg", 600, 600, false, true),
             BackgroundRepeat.REPEAT,
             BackgroundRepeat.NO_REPEAT,
             BackgroundPosition.DEFAULT,
