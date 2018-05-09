@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.GUI.PrintBillController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="622.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="559.0" minHeight="8.0" prefHeight="512.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="559.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label fx:id="tableNumberLabel" alignment="CENTER" prefHeight="23.0" prefWidth="600.0" text="Print Bill for Table: (null) " textAlignment="CENTER">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="2">
+            <children>
+                <Button mnemonicParsing="false" onAction="#addBillButtonClicked" prefHeight="27.0" prefWidth="100.0" text="Add to bill" />
+                <Button mnemonicParsing="false" onAction="#payBillButtonClicked" prefHeight="27.0" prefWidth="100.0" text="Pay bill" />
+            </children>
+            <padding>
+                <Insets right="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <HBox GridPane.rowIndex="1">
+            <children>
+                <TableView fx:id="tableView" prefHeight="462.0" prefWidth="356.0" GridPane.rowIndex="1">
+                    <placeholder>
+                        <Label text="No dishes are delivered to this table." />
+                    </placeholder>
+                    <columns>
+                        <TableColumn prefWidth="163.0" text="Dish name">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="name" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="91.0" text="Dish number">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="dishNumber" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn maxWidth="500.0" prefWidth="100.0" text="Dish price">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="price" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                    <HBox.margin>
+                        <Insets left="3.0" />
+                    </HBox.margin>
+                </TableView>
+            <StackPane>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="441.0" stroke="BLACK" strokeType="INSIDE" width="237.0" />
+                      <Label fx:id="billLabel" alignment="TOP_LEFT" prefHeight="461.0" prefWidth="245.0" text="Choose dishes">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                          <HBox.margin>
+                              <Insets />
+                          </HBox.margin>
+                          <padding>
+                              <Insets left="5.0" right="5.0" top="20.0" />
+                          </padding>
+                      </Label>
+               </children>
+            </StackPane>
+            </children>
+        </HBox>
+    </children>
+</GridPane>

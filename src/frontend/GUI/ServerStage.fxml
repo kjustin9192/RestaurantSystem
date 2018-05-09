@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<SplitPane dividerPositions="0.2993311036789298" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.GUI.ServerController">
+   <items>
+       <VBox layoutX="10.0" layoutY="25.0" prefHeight="398.0" prefWidth="175.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" SplitPane.resizableWithParent="false">
+           <padding>
+               <Insets left="5.0" right="5.0" top="5.0" />
+           </padding>
+          <children>
+              <StackPane onMouseClicked="#takeSeat">
+                 <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="47.0" stroke="#806e6e" strokeType="INSIDE" width="175.0">
+                         <VBox.margin>
+                             <Insets bottom="3.0" left="3.0" right="3.0" top="20.0" />
+                         </VBox.margin>
+                     </Rectangle>
+                     <Label text="Take Seat" />
+                 </children>
+              </StackPane>
+              <StackPane onMouseClicked="#order">
+                 <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="47.0" stroke="#806e6e" strokeType="INSIDE" width="175.0">
+                         <VBox.margin>
+                             <Insets bottom="3.0" left="3.0" right="3.0" top="20.0" />
+                         </VBox.margin>
+                     </Rectangle>
+                     <Label text="Order Food" />
+                 </children>
+              </StackPane>
+              <StackPane onMouseClicked="#bill">
+                 <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="47.0" stroke="#806e6e" strokeType="INSIDE" width="175.0">
+                         <VBox.margin>
+                             <Insets bottom="3.0" left="3.0" right="3.0" top="20.0" />
+                         </VBox.margin>
+                     </Rectangle>
+                     <Label text="Print Bill" />
+                 </children>
+              </StackPane>
+              <StackPane onMouseClicked="#clear">
+                 <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="47.0" stroke="#806e6e" strokeType="INSIDE" width="175.0">
+                         <VBox.margin>
+                             <Insets bottom="3.0" left="3.0" right="3.0" top="20.0" />
+                         </VBox.margin>
+                     </Rectangle>
+                     <Label text="Clear Table" />
+                 </children>
+              </StackPane>
+          </children>
+       </VBox>
+       <VBox>
+          <children>
+              <VBox fx:id="gridParent" minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="405.0">
+                 <children>
+                     <HBox alignment="TOP_RIGHT" prefHeight="31.0" prefWidth="405.0" spacing="3.0">
+                         <VBox.margin>
+                             <Insets />
+                         </VBox.margin>
+                         <padding>
+                             <Insets right="3.0" top="3.0" />
+                         </padding>
+                        <children>
+                            <Button mnemonicParsing="false" onAction="#receiveItem" text="Receive item">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Button>
+                            <Button mnemonicParsing="false" onAction="#logOff" text="Sign out">
+                                <HBox.margin>
+                                    <Insets />
+                                </HBox.margin>
+                            </Button>
+                        </children>
+                     </HBox>
+                     <HBox fx:id="hBox1" prefHeight="25.0" prefWidth="405.0" />
+                     <HBox fx:id="hBox2" prefHeight="25.0" prefWidth="405.0" />
+                 </children>
+              </VBox>
+            <Pane prefHeight="29.0" prefWidth="405.0">
+               <children>
+                  <Label fx:id="instructionLabel" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="374.0" textAlignment="CENTER" textFill="RED" />
+               </children>
+            </Pane>
+              <Pane prefHeight="168.0" prefWidth="405.0">
+                 <children>
+                     <TableView fx:id="finishedDishTableView" layoutY="-5.0" prefHeight="176.0" prefWidth="405.0">
+                         <placeholder>
+                             <Label text="No dishes are ready yet" />
+                         </placeholder>
+                         <columns>
+                             <TableColumn prefWidth="156.0" text="Finished dish name">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="name" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn minWidth="0.0" prefWidth="102.0" text="dish number">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="dishNumber" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                             <TableColumn maxWidth="146.0" minWidth="0.0" prefWidth="146.0" text="table number">
+                                 <cellValueFactory>
+                                     <PropertyValueFactory property="tableNumber" />
+                                 </cellValueFactory>
+                             </TableColumn>
+                         </columns>
+                         <padding>
+                             <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                         </padding>
+                     </TableView>
+                 </children>
+              </Pane>
+            <HBox prefHeight="27.0" prefWidth="405.0" spacing="3.0">
+               <children>
+                  <Region prefHeight="27.0" prefWidth="218.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deliver">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Button mnemonicParsing="false" onAction="#successButtonClicked" text="Success" />
+                  <Button mnemonicParsing="false" onAction="#failButtonClicked" text="Fail" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="4.0" />
+               </padding>
+            </HBox>
+          </children>
+       </VBox>
+   </items>
+</SplitPane>

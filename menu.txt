@@ -1,0 +1,5 @@
+hamburger;5;bun:1:1:1,lettuce:1:1:2,tomato:1:1:2,patty:1:1:1,cheese:0:0:1,bacon:0:0:1
+VeggieBurger;6;bun:1:1:1,lettuce:1:1:2,tomato:1:1:2,veggie patty:1:1:1,cheese:0:0:1
+nuggets(S);4;chicken nugget:4:4:4
+nuggets(L);10;chicken nugget:7:7:7
+fries;3;potato:1:1:1

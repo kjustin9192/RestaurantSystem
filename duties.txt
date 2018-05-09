@@ -1,0 +1,6 @@
+internet connection(Server, Client): Bill
+fix phase 1 code design: Donghee
+connect phase 1 code with frontend.GUI through Server: Yujie, Bill
+build the frontend.GUI: Justin, Yujie
+backend.logger: Justin
+backend.inventory update: Donghee

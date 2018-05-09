@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="100.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.StartController">
+   <children>
+       <Text fx:id="getOrderButton" layoutX="50.0" layoutY="29.0" text="Click x to shut down ComputerServer" />
+
+   </children>
+</AnchorPane>

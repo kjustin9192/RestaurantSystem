@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.GUI.ClearTableController">
+   <children>
+       <Label fx:id="tableNumberLabel" layoutX="30.0" layoutY="74.0" prefHeight="35.0" prefWidth="245.0" />
+       <Button fx:id="yesButton" layoutX="201.0" layoutY="162.0" mnemonicParsing="false" onAction="#yesButtonClicked" text="Yes" />
+       <Button fx:id="noButton" layoutX="253.0" layoutY="162.0" mnemonicParsing="false" onAction="#noButtonClicked" text="No" />
+   </children>
+</Pane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.GUI.DishesNotDeliveredController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="296.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="550.0" minHeight="10.0" prefHeight="550.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="List of dishes that are not delivered yet" textAlignment="CENTER" wrappingWidth="580.21875">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TableView fx:id="tableView" prefHeight="517.0" prefWidth="580.0" GridPane.rowIndex="1">
+            <placeholder>
+                <Label text="All dishes are delivered!" />
+            </placeholder>
+            <columns>
+                <TableColumn prefWidth="204.0" text="Dish name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="0.0" prefWidth="164.0" text="Dish number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dishNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="210.0" text="Status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshButtonClicked" text="Refresh" />
+    </children>
+</GridPane>
